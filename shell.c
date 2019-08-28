@@ -28,7 +28,7 @@ int main(__attribute__((unused))int argc, char **argv)
 		fflush(stdout);
 	num++;
 		if (isatty(STDIN_FILENO) == 1)  /* Check for non interactive mode */
-			write(1, "$ ", 2);
+			write(STDOUT_FILENO, "$ ", 2);
 
 		checkgetline = getline(&buffer, &bufsize, stdin);
 		if (checkgetline == EOF)
