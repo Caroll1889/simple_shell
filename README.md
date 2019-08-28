@@ -8,7 +8,7 @@ Simple shell project is a project of a basic command line interpreter replicatio
 This shell is directed for computer enthusiasts that looking to learn basic source code of a shell program. It's for the people that want to install and prove a simple shell.
  
 ### Instalation
-Clone this repository below
+Clone this repository below.
  
 ```bash
 https://github.com/Caroll1889/simple_shell
