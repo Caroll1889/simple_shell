@@ -36,7 +36,7 @@ To list files in teh current directory in non-interactive mode:
 
 .SH SHELL BUILT-IN COMMAND
 .B $ 
-Contains some built-in functions. These are listed bellow and doesn't support any flag
+Contains some built-in functions. These are listed bellow and doesn't support any flag.
 .PP
 .PP
 .B cd [dir]
