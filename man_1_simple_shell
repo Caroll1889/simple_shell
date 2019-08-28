@@ -1,0 +1,60 @@
+.TH $ "1.0"
+
+.SH NAME
+$ - A basic command line interpreter replication that, by evaluating user input, executes commands
+
+.SH SYNOPSIS
+.B $
+[command [args...][file]]
+
+.SH DESCRIPTION
+.I $
+Is a command lenguage interpreter that executes commands read from standard input or from a file.
+
+.SH ARGUMENTS
+The first argument read from standrd input assumed to be a command and folllowing arguments are its parameters. 
+
+.PP
+.B
+Exit status is the exit of the last command executed in the input. If no cmmands are executed, then the exit status is 0. 
+
+.SH SHELL GRAMMAR
+
+.B SImple Command
+
+Is a sequence of optional variables followed by a blank space or redirectors and terminated with a control operator. the first word specifies the command and is the zero argument,  the rest of the words are passed as command arguments.    
+
+.SH RETURN VALUE
+The command return value is its exit status that is usually 0.
+
+.SH EXAMPLES
+to list files in the current directory in interactive mode:
+.B ls
+
+To list files in teh current directory in non-interactive mode:
+.B echo 'ls' | ./hsh
+
+.SH SHELL BUILT-IN COMMAND
+.B $ 
+Contains some built-in functions. These are listed bellow and doesn't support any flag
+.PP
+.PP
+.B cd [dir]
+.PP
+change the current directory. HOME is the dir by default.
+.PP
+.B env
+.PP
+Print out a list of all shell variables. Each variable are separated by a new line.
+.PP
+.B exit [status] 
+.PP
+This exit command terminates the current Shell.
+.SH AUTHORS
+Caroll Hudgson(874@holbertonschool.com), Juan F. Calle(878@holbertonschool.com).
+.PP
+.SH "BUGS"
+.PP
+At the moment no bugs founded.
+.PP
+If you find any bugs you should report it.
