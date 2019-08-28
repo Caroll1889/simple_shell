@@ -6,7 +6,7 @@
 void handler(__attribute__((unused))int num)
 {
 	signal(SIGINT, handler);
-	write(1, "\n", 1);
+	write(STDOUT_FILENO, "\n", 1);
 }
 /**
  *main - program for shell runtime
@@ -25,7 +25,7 @@ int main(__attribute__((unused))int argc, char **argv)
 	signal(SIGINT, handler);
 	while (checkgetline != EOF)
 	{
-
+		fflush(stdout);
 	num++;
 		if (isatty(STDIN_FILENO) == 1)  /* Check for non interactive mode */
 			write(1, "$ ", 2);
