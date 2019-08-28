@@ -4,7 +4,7 @@
  * to separtor
  * @str: string to segment by delimiters
  * @delim : separator to delim the string
- * @flag: signal for continue previous process where
+ * @signal: warns for continue previous process where
  * it was started
  * Return: pointer to string until is the separator
  */

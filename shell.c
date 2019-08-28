@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * handler - function for get signal on ctrl command
- * @numa: integer which receives the signal handler
+ * @num: integer which receives the signal handler
  */
 void handler(__attribute__((unused))int num)
 {
@@ -9,8 +9,7 @@ void handler(__attribute__((unused))int num)
 	write(1, "\n", 1);
 }
 /**
- *main - receive the info, verific Crt+C Crt+D and exit and exec other fu\
-nc.
+ *main - program for shell runtime
  *@argc: number of arguments
  *@argv: argments
  *Return: EXIT_SUCCESS if sucessful

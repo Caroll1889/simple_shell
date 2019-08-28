@@ -59,8 +59,8 @@ char *_convert_num(int k)
 		a *= 10;
 		j++;
 	}
-	aux = calloc( j + 1, sizeof(char));
-	
+	aux = calloc(j + 1, sizeof(char));
+
 	while (a != 0 && j >= 0)
 	{
 		aux[j] = k / a + '0';

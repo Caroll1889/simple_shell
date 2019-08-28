@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- *_strtok_execv - tokenizes the initial string and execute it
+ *_tok_exec - tokenizes the initial string and execute it
  *
- *@buffer: It's the initial string captured for getline
- *@name: name of function
- *@num: number of times that the principal function has been executed
+ *@buffer: Initial string captured for getline
+ *@name: function name
+ *@num: times that the principal function has been executed
  */
 void _tok_exec(char *buffer, char *name, int num)
 {
