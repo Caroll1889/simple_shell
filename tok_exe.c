@@ -22,12 +22,12 @@ void _tok_exec(char *buffer, char *name, int num)
 	{
 		if (buffer[0] == '\n')
 		{ free(buffer), exit(0); }
-		tok[i] = _strtok(buffer, " \t\n", START);
+		tok[i] = strtok(buffer, " \t\n");
 		if (tok[0] == NULL)
 		{free(buffer), free(tok[0]), exit(0); }
 		temp = tok[0];
 		while (tok[i] != NULL)
-		{i++,   tok[i] = _strtok(buffer, " \t\n", RUN); }
+		{i++,   tok[i] = strtok(NULL, " \t\n"); }
 		if (_strcmp("env", buffer) == 0)
 		{free(buffer), _env(i), free_grid(tok, i), exit(0); }
 		er = "F";

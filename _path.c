@@ -10,17 +10,18 @@ char *_path(char *str)
 	char *name = "PATH", *tok, *temp, *s = "/";
 	int i;
 
-
-	if (access(str, X_OK) == 0)
+	if (access(str, X_OK && F_OK) == 0)
 		return (str);  /* str is a correct path route*/
+
 	str = str_concat(s, str);
 	for (i = 0; environ[i] != NULL; i++)
 	{
-		tok = _strtok(environ[i], "=", START);
+		tok = strtok(environ[i], "=");
 		if (_strcmp(name, tok) == 0)
 		{
 			temp = str_concat(tok, str);
-			if (access(temp, X_OK) == 0)
+
+			if (access(temp, X_OK && F_OK) == 0)
 			{
 				free(tok);
 				free(str);
@@ -29,10 +30,10 @@ char *_path(char *str)
 			while (tok != NULL)
 			{
 				free(tok);
-				tok = _strtok(environ[i], "=:", RUN);
+				tok = strtok(NULL, "=:");
 				free(temp);
 				temp = str_concat(tok, str);
-				if (access(temp, X_OK) == 0)
+				if (access(temp, X_OK && F_OK) == 0)
 				{
 					free(tok);
 					free(str);
