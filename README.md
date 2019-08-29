@@ -42,10 +42,6 @@ $
 
 * **Caroll Hudgson** - *Initial Work and Documentation* - [caroll1889](https://github.com/Caroll1889)
 * **Juan F. Calle** - *Initial Work and Documentación* - [johnconnor77](https://github.com/johnconnor77)
- 
-## Licensing
-
-Simple Shell is lincesed under the MIT License
 
 ---
 
